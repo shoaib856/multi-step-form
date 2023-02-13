@@ -36,7 +36,7 @@
 .form > .container > .row .aside {
   width: 30.2% !important;
   height: calc(600px - 32px);
-  padding: 33px 32.5px;
+  padding: 35px 32.5px;
   background-image: url("./assets/images/bg-sidebar-desktop.svg");
 }
 .form > .container > .row .main {
