@@ -1,0 +1,42 @@
+.plan {
+    display: block;
+    border: 1px solid var(--Light-gray);
+    border-radius: 10px;
+    width: 138.5px;
+    padding: 19.5px 0 13px 15.5px;
+    cursor: pointer;
+  }
+  .plan:has(input[type="radio"]:checked),
+  .plan:hover {
+    border-color: var(--Purplish-blue);
+    background-color: var(--Magnolia);
+  }
+  
+  .plan .image {
+    margin-bottom: 40px;
+  }
+  .plan .desc {
+    margin-top: -1px;
+    margin-bottom: -1px;
+    font-size: 16px;
+    font-family: "Medium";
+    color: var(--Marine-blue);
+  }
+  .plan .price {
+    color: var(--Cool-gray);
+    margin-bottom: 0px;
+    margin-top: 1px;
+    margin-left: -1px;
+    font-size: 14.5px;
+    font-family: "Regular";
+  }
+  .plan .price .price-amount {
+    margin-bottom: 2px;
+  }
+  .plan .price .price-discount {
+    font-size: 12px;
+    margin-bottom: 3px;
+    color: var(--Marine-blue);
+    font-family: "Medium";
+  }
+  

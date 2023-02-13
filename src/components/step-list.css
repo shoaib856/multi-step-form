@@ -1,0 +1,43 @@
+.step-list {
+    gap: 21.5px;
+    flex-direction: column;
+  }
+  .step {
+    color: var(--White);
+    gap: 15.5px;
+    /* height: 34px; */
+  }
+  .step .step-number {
+    width: 33px;
+    height: 33px;
+    background-color: transparent;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    display: flex;
+    font-size: 14.5px;
+    justify-content: center;
+    font-family: "Medium";
+    align-items: center;
+    margin-top: 1px;
+  }
+  .step .step-number.active{
+    background-color: var(--White);
+    color: var(--Marine-blue);
+  }
+  .step .step-details .step-details-number {
+    font-family: "Regular";
+    color: var(--Light-gray) !important;
+    font-size: 12.5px;
+    margin-top: 3px;
+    word-spacing: -1px;
+  }
+  .step .step-details .step-details-info {
+    font-family: "Bold";
+    font-size: 14.5px;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    position: relative;
+    bottom: 1.5px;
+    left: 0.5px;
+  }
+  

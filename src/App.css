@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
-}
+:root {
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: var(--Magnolia);
 }
-
-.App-link {
-  color: #61dafb;
+.form > .container {
+  height: 600px;
+  width: 942px;
+  background-color: var(--White);
+  /* padding: 20px; */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form > .container > .row {
+  padding: 15px 17px;
+}
+.form > .container > .row .aside {
+  width: 30.2% !important;
+  height: calc(600px - 32px);
+  padding: 34.5px 32.5px;
+  background-image: url("./assets/images/bg-sidebar-desktop.svg");
+}
+.form > .container > .row .main {
+  position: relative;
+  width: 69.8% !important;
+  height: calc(600px - 32px);
+  padding: 38px 83px 17px 100px;
+}
+.main .next,
+.main .back {
+  position: absolute;
+  bottom: 16px;
+  font-family: "Medium";
+  outline: none;
+  border: none;
+  font-size: 16px;
+}
+.main .next {
+  right: 83px;
+  padding: 12px 0px;
+  width: 123px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--Marine-blue);
+  color: var(--White);
+}
+.main .next:hover {
+  background-color: var(--Purplish-blue);
+}
+.main .back {
+  left: 100px;
+  font-family: "Medium";
+  padding: 13px 0.5px;
+  background-color: transparent;
+  color: var(--Cool-gray);
+}
+.main .back:hover {
+  color: var(--Marine-blue);
+}
+.main .plan-type {
+  margin-top: 34px;
+  padding: 11px 0px;
+  background-color: var(--Magnolia);
+  font-size: 14.5px;
+  gap: 23.5px;
+  font-family: "Medium";
+  margin-left: -14.5px;
+}
+.main .plan-type .type {
+  color: var(--Cool-gray);
+  margin: 0;
+}
+.main .plan-type .type.active {
+  color: var(--Marine-blue);
+}
+.main .plan-type .type-choice {
+  width: 38px;
+  height: 20px;
+  background-color: var(--Marine-blue);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.main .plan-type .type-choice input[type="checkbox"] {
+  display: none;
+}
+.main .plan-type .type-choice .ball {
+  display: block;
+  width: 11.5px;
+  height: 12px;
+  margin-left: 5px;
+  background-color: var(--White);
+  border-radius: 50%;
+  transition: margin-left 0.3s;
+  cursor: pointer;
+}
+.main .plan-type .type-choice .ball:has([type="checkbox"]:checked) {
+  margin-left: 21.5px;
 }

@@ -1,0 +1,29 @@
+.field {
+  margin-bottom: 21.5px;
+  color: var(--Marine-blue);
+}
+.input-label {
+  display: block;
+  margin-bottom: 5.5px;
+  font-family: "Regular";
+  font-size: 14px;
+  position: relative;
+}
+.input-field {
+  height: 48px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--Light-gray);
+  padding-left: 15px;
+  font-size: 16px;
+  font-family: "Medium";
+  color: var(--Marine-blue);
+}
+.error-msg {
+  color: var(--Strawberry-red);
+  position: absolute;
+  right: 0px;
+  top: -1px;
+  font-size: 14.5px;
+  font-family: "Medium";
+}

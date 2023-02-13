@@ -1,0 +1,56 @@
+.summary {
+  background-color: var(--Magnolia);
+  padding: 18px 24px 4px;
+}
+.summary .selected-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Bold";
+  color: var(--Marine-blue);
+  padding-bottom: 6px;
+}
+.summary .selected-plan .selected-plan-name p {
+  font-size: 15.5px;
+  margin-bottom: -3px;
+}
+
+.summary .selected-plan .selected-plan-name .change-plan-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Regular";
+  text-decoration: underline;
+  font-size: 14px;
+  color: var(--Cool-gray);
+}
+.summary .selected-plan .selected-plan-name .change-plan-btn:hover {
+  color: var(--Purplish-blue);
+}
+.summary .selected-plan .selected-plan-price {
+  margin: 0;
+}
+.summary .selected-add-ons .selected-add-on {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Regular";
+  font-size: 14px;
+  color: var(--Cool-gray);
+}
+.total-price {
+  font-family: "Regular";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Cool-gray);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 22px;
+  font-size: 14px;
+}
+.total-price .price {
+  font-family: "Bold";
+  color: var(--Purplish-blue);
+  font-size: 20px;
+  margin: 0;
+}
