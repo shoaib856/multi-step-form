@@ -5,13 +5,12 @@
 .step {
   color: var(--White);
   gap: 15.5px;
-  /* height: 34px; */
 }
 .step .step-number {
   width: 33px;
   height: 33px;
   background-color: transparent;
-  border: 1px solid var(--White);
+  border: 1px solid var(--Light-blue);
   border-radius: 50%;
   display: flex;
   font-size: 14.5px;
@@ -22,7 +21,6 @@
 }
 .step .step-number.active {
   background-color: var(--Pastel-blue);
-  border-color: var(--Pastel-blue);
   color: var(--Marine-blue);
 }
 .step .step-details .step-details-number {
