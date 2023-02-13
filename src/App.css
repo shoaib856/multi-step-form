@@ -36,14 +36,14 @@
 .form > .container > .row .aside {
   width: 30.2% !important;
   height: calc(600px - 32px);
-  padding: 34.5px 32.5px;
+  padding: 33px 32.5px;
   background-image: url("./assets/images/bg-sidebar-desktop.svg");
 }
 .form > .container > .row .main {
   position: relative;
   width: 69.8% !important;
   height: calc(600px - 32px);
-  padding: 38px 83px 17px 100px;
+  padding: 39px 83px 17px 100px;
 }
 .main .next,
 .main .back {
