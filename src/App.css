@@ -25,94 +25,111 @@
   background-color: var(--Magnolia);
 }
 .form > .container {
-  height: 600px;
-  width: 942px;
+  max-height: 600px;
+  max-width: 942px;
   background-color: var(--White);
-  /* padding: 20px; */
 }
+
 .form > .container > .row {
   padding: 15px 17px;
+  box-shadow: 1px 5px 10px var(--Light-gray);
 }
-.form > .container > .row .aside {
-  width: 30.2% !important;
+.form > .container > .row aside {
+  width: 30.2%;
   height: calc(600px - 32px);
-  padding: 35px 32.5px;
+  padding: 2.17rem 2rem;
   background-image: url("./assets/images/bg-sidebar-desktop.svg");
 }
-.form > .container > .row .main {
+.form > .container > .row main {
   position: relative;
-  width: 69.8% !important;
+  width: 69.8%;
+  padding: 0;
   height: calc(600px - 32px);
-  padding: 39px 83px 17px 100px;
 }
-.main .next,
-.main .back {
+.form > .container > .row main .content {
+  padding: 2.5rem 4.2rem 3rem 5.25rem;
+  margin: 0 1rem;
+  border-radius: 10px;
+}
+
+.form > .container > .row main .btns {
   position: absolute;
-  bottom: 16px;
+  bottom: 17px;
+  left: 0;
+  width: 100%;
+  background-color: var(--White);
+  padding: 0 5.2rem 0 6.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form > .container > .row main :is(.next, .back) {
   font-family: "Medium";
   outline: none;
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
 }
-.main .next {
-  right: 83px;
+main .next {
   padding: 12px 0px;
-  width: 123px;
+  width: 7.7rem;
   text-align: center;
   border-radius: 10px;
   background-color: var(--Marine-blue);
   color: var(--White);
 }
-.main .next:hover {
+main .next:hover {
   background-color: var(--Purplish-blue);
 }
-.main .back {
-  left: 100px;
+main .back {
   font-family: "Medium";
-  padding: 13px 0.5px;
+  /* padding: 13px 0.5px; */
+  padding: 0.6rem 0;
   background-color: transparent;
   color: var(--Cool-gray);
 }
-.main .back:hover {
+main .back:hover {
   color: var(--Marine-blue);
 }
-.main .plan-type {
-  margin-top: 34px;
-  padding: 11px 0px;
-  background-color: var(--Magnolia);
-  font-size: 14.5px;
-  gap: 23.5px;
-  font-family: "Medium";
-  margin-left: -14.5px;
-}
-.main .plan-type .type {
-  color: var(--Cool-gray);
-  margin: 0;
-}
-.main .plan-type .type.active {
-  color: var(--Marine-blue);
-}
-.main .plan-type .type-choice {
-  width: 38px;
-  height: 20px;
-  background-color: var(--Marine-blue);
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-}
-.main .plan-type .type-choice input[type="checkbox"] {
-  display: none;
-}
-.main .plan-type .type-choice .ball {
-  display: block;
-  width: 11.5px;
-  height: 12px;
-  margin-left: 5px;
-  background-color: var(--White);
-  border-radius: 50%;
-  transition: margin-left 0.3s;
-  cursor: pointer;
-}
-.main .plan-type .type-choice .ball:has([type="checkbox"]:checked) {
-  margin-left: 21.5px;
+
+@media (max-width: 425px) {
+  .form {
+    align-items: baseline;
+  }
+  .form > .container {
+    background-color: transparent;
+  }
+  .form > .container > .row {
+    padding: 0;
+    box-shadow: none;
+  }
+  .form > .container > .row aside {
+    margin-bottom: -73px;
+    width: 100%;
+    background-image: url("./assets/images/bg-sidebar-mobile.svg");
+    height: 172px;
+    padding-top: 30px;
+  }
+  .form > .container > .row main {
+    width: 100%;
+    padding: 0;
+  }
+  .form > .container > .row main .content {
+    box-shadow: 1px 5px 10px var(--Light-gray);
+    background-color: var(--White);
+    padding: 2rem 1.5rem;
+  }
+  .form > .container > .row main .btns {
+    position: fixed;
+    bottom: 0;
+    margin-top: 1.59rem;
+    padding: 0.95rem 1rem;
+  }
+  .form > .container > .row main :is(.next, .back) {
+    font-size: 0.875rem;
+  }
+  main .next {
+    padding: 9.5px 0px;
+    width: 97px;
+    border-radius: 5px;
+  }
 }

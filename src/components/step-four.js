@@ -36,7 +36,7 @@ function StepFour({ changePlan }) {
             ${plan.priceActivated}/{paymentType ? "mo" : "yr"}
           </p>
         </div>
-        <hr style={{ color: "var(--Cool-gray)" }} />
+        <hr />
         <div className="selected-add-ons">
           {selectedAddOns.map((selectedAddOn) => {
             return selectedAddOn.checked ? (
@@ -61,7 +61,7 @@ function StepFour({ changePlan }) {
           Total (per {paymentType ? "month" : "year"})
         </p>
         <p className="price">
-          +${total()}/{paymentType ? "mo" : "yr"}
+          ${total()}/{paymentType ? "mo" : "yr"}
         </p>
       </div>
     </>

@@ -1,82 +1,115 @@
 .add-ons {
-    gap: 15.5px;
-    margin-top: 2px;
+  gap: 1rem;
+  padding-top: 2px;
+}
+.add-ons .add-on {
+  border: 1px solid var(--Light-gray);
+  border-radius: 10px;
+  padding: 0.6rem 2.1rem 0.79rem;
+  gap: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.add-ons .add-on-details h3 {
+  font-family: "Bold";
+  font-size: 0.98rem;
+  margin-bottom: 0;
+  margin-top: 0.6rem;
+  margin-left: 0.5px;
+  color: var(--Marine-blue);
+}
+.add-ons .add-on-details p {
+  font-family: "Regular";
+  color: var(--Cool-gray);
+  font-size: 0.89rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.2rem;
+}
+.add-ons .add-on:has(input[type="checkbox"]:checked),
+.add-ons .add-on:hover {
+  border-color: var(--Purplish-blue);
+  background-color: var(--Magnolia);
+}
+.add-ons .add-on input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  cursor: pointer;
+}
+.add-ons .add-on input[type="checkbox"]::before,
+.add-ons .add-on input[type="checkbox"]:checked::before,
+.add-ons .add-on input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -11px;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.add-ons .add-on input[type="checkbox"]::before {
+  border: 1px solid var(--Light-gray);
+  border-radius: 6px;
+}
+.add-ons .add-on input[type="checkbox"]:checked:before {
+  background-color: var(--Purplish-blue);
+}
+.add-ons .add-on input[type="checkbox"]:checked:after {
+  -webkit-clip-path: polygon(
+    49% 85%,
+    73% 59%,
+    80% 66%,
+    49% 100%,
+    31% 80%,
+    38% 72%
+  );
+  clip-path: polygon(49% 85%, 73% 59%, 80% 66%, 49% 100%, 31% 80%, 38% 72%);
+  top: -15px;
+  left: -11.5px;
+  background-color: var(--White);
+}
+.add-ons .add-on .price > p {
+  position: absolute;
+  right: 22.5px;
+  top: 30px;
+  font-family: "Regular";
+  font-size: 0.9rem;
+  color: var(--Purplish-blue);
+  display: none;
+}
+.add-ons .add-on .price > p.active {
+  display: block;
+}
+
+@media (max-width: 425px) {
+  .add-ons {
+    gap: 0.75rem;
+    margin: 0;
+    padding-top: 2px;
   }
   .add-ons .add-on {
-    border: 1px solid var(--Light-gray);
-    border-radius: 10px;
-    padding: 5px 35px;
-    gap: 32px;
-    cursor: pointer;
-    position: relative;
+    gap: 1rem;
+    padding: 0.15rem 2.1rem;
   }
-  
   .add-ons .add-on-details h3 {
-    font-family: "Bold";
-    font-size: 15.5px;
-    margin-top: 14.5px;
-    margin-bottom: 0;
-    margin-left: 0.5px;
-    color: var(--Marine-blue);
+    font-size: 0.85rem;
   }
   .add-ons .add-on-details p {
-    font-family: "Regular";
-    color: var(--Cool-gray);
-    font-size: 14px;
-    margin-bottom: 12px;
-    margin-top: 3px;
-  }
-  .add-ons .add-on:has(input[type="checkbox"]:checked),
-  .add-ons .add-on:hover {
-    border-color: var(--Purplish-blue);
-    background-color: var(--Magnolia);
-  }
-  .add-ons .add-on input[type="checkbox"] {
-    position: relative;
-    appearance: none;
-    cursor: pointer;
+    font-size: 0.76rem;
+    margin-bottom: 0.5rem;
   }
   .add-ons .add-on input[type="checkbox"]::before,
   .add-ons .add-on input[type="checkbox"]:checked::before,
   .add-ons .add-on input[type="checkbox"]:checked::after {
-    content: "";
-    position: absolute;
-    width: 22.5px;
-    height: 22.5px;
-    top: -12px;
-    left: -13px;
-  }
-  .add-ons .add-on input[type="checkbox"]::before {
-    border: 1px solid var(--Light-gray);
-    border-radius: 6px;
-  }
-  .add-ons .add-on input[type="checkbox"]:checked:before {
-    background-color: var(--Purplish-blue);
+    top: -11px;
+    left: -19px;
   }
   .add-ons .add-on input[type="checkbox"]:checked:after {
-    -webkit-clip-path: polygon(
-      49% 85%,
-      73% 59%,
-      80% 66%,
-      49% 100%,
-      31% 80%,
-      38% 72%
-    );
-    clip-path: polygon(49% 85%, 73% 59%, 80% 66%, 49% 100%, 31% 80%, 38% 72%);
-    top: -18px;
-    left: -14.5px;
-    background-color: var(--White);
+    top: -16px;
+    left: -20.5px;
   }
   .add-ons .add-on .price > p {
-    position: absolute;
-    right: 22.5px;
-    top: 30px;
-    font-family: "Regular";
-    font-size: 14.5px;
-    color: var(--Purplish-blue);
-    display: none;
+    top: 21.5px;
+    right: 15px;
+    font-size: 0.75rem;
   }
-  .add-ons .add-on .price > p.active {
-    display: block;
-  }
-  
+}

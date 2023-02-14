@@ -1,41 +1,46 @@
 .step-list {
-  gap: 21.5px;
+  gap: 1.39rem;
   flex-direction: column;
 }
 .step {
-  color: var(--White);
-  gap: 15.5px;
+  color: var(--Alabaster);
+  gap: 0.94rem;
 }
 .step .step-number {
-  width: 33px;
-  height: 33px;
+  width: 2.09rem;
+  height: 2.09rem;
   background-color: transparent;
-  border: 1px solid var(--Light-blue);
+  border: 1.5px solid var(--Pastel-blue);
   border-radius: 50%;
   display: flex;
-  font-size: 14.5px;
+  font-size: 0.95rem;
   justify-content: center;
-  font-family: "Medium";
+  font-family: "Bold";
   align-items: center;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 .step .step-number.active {
-  background-color: var(--Pastel-blue);
+  background-color: var(--Light-blue);
   color: var(--Marine-blue);
 }
 .step .step-details .step-details-number {
   font-family: "Regular";
-  color: var(--Pastel-blue) !important;
-  font-size: 12.5px;
-  margin-top: 3px;
-  word-spacing: -1px;
+  color: var(--Pastel-blue);
+  font-size: 0.75rem;
+  margin-top: 4px;
 }
 .step .step-details .step-details-info {
   font-family: "Bold";
-  font-size: 14.5px;
-  letter-spacing: 0.5px;
-  word-spacing: 1px;
-  position: relative;
-  bottom: 1.5px;
-  left: 0.5px;
+  font-size: 0.97rem;
+  margin-top: -3px;
+}
+@media (max-width: 425px) {
+  .step-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .step .step-details {
+    display: none;
+  }
 }

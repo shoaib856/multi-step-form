@@ -1,42 +1,119 @@
+.plans {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding-top: 0.15rem;
+  margin-bottom: 2rem;
+}
 .plan {
-    display: block;
-    border: 1px solid var(--Light-gray);
-    border-radius: 10px;
-    width: 138.5px;
-    padding: 19.5px 0 13px 15.5px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2.55rem;
+  border: 1px solid var(--Light-gray);
+  border-radius: 10px;
+  width: 138.5px;
+  padding: 1rem 0.9rem 0.8rem;
+  cursor: pointer;
+}
+.plan:has(input[type="radio"]:checked),
+.plan:hover {
+  border-color: var(--Purplish-blue);
+  background-color: var(--Magnolia);
+}
+
+.plan .image {
+  padding-top: 2px;
+  /* margin-bottom: 40px; */
+  padding-left: 1px;
+}
+.plan .desc {
+  margin-top: 0;
+  margin-bottom: 1px;
+  font-size: 1rem;
+  font-family: "Medium";
+  color: var(--Marine-blue);
+}
+.plan .price {
+  color: var(--Cool-gray);
+  margin-bottom: 0;
+  margin-top: 0;
+  /* margin-left: -1px; */
+  font-size: 0.875rem;
+  font-family: "Regular";
+}
+.plan .price .price-amount {
+  margin-bottom: 2.5px;
+}
+.plan .price .price-discount {
+  color: var(--Marine-blue);
+  font-family: "Medium";
+
+  font-size: 0.75rem;
+  margin-bottom: 2px;
+  margin-top: 3px;
+}
+.plan-type {
+  background-color: var(--Magnolia);
+  padding: 0.9rem 0px;
+  font-size: 0.9rem;
+  margin-left: -13px;
+  gap: 1.5rem;
+  font-family: "Medium";
+}
+.plan-type .type {
+  color: var(--Cool-gray);
+  margin: 0;
+}
+.plan-type .type.active {
+  color: var(--Marine-blue);
+}
+.plan-type .type-choice {
+  /* width: 38px;
+  height: 20px; */
+  width: 2.35rem;
+  height: 1.3rem;
+  background-color: var(--Marine-blue);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.plan-type .type-choice input[type="checkbox"] {
+  display: none;
+}
+.plan-type .type-choice .ball {
+  display: block;
+  /* width: 11.5px;
+  height: 12px;
+  margin-left: 5px; */
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.2rem;
+  background-color: var(--White);
+  border-radius: 50%;
+  transition: margin-left 0.3s;
+  cursor: pointer;
+}
+.plan-type .type-choice .ball:has([type="checkbox"]:checked) {
+  /* margin-left: 21.5px; */
+  margin-left: 1.4rem;
+}
+
+@media (max-width: 425px) {
+  .plans {
+    flex-direction: column;
+    justify-content: baseline;
   }
-  .plan:has(input[type="radio"]:checked),
-  .plan:hover {
-    border-color: var(--Purplish-blue);
-    background-color: var(--Magnolia);
+  .plan {
+    width: 100%;
+    flex-direction: row;
+    gap: 0.9rem;
+    padding: 0.85rem 0.9rem 1.05rem;
   }
-  
-  .plan .image {
-    margin-bottom: 40px;
-  }
-  .plan .desc {
-    margin-top: -1px;
-    margin-bottom: -1px;
-    font-size: 16px;
-    font-family: "Medium";
-    color: var(--Marine-blue);
-  }
-  .plan .price {
-    color: var(--Cool-gray);
-    margin-bottom: 0px;
-    margin-top: 1px;
-    margin-left: -1px;
-    font-size: 14.5px;
-    font-family: "Regular";
-  }
-  .plan .price .price-amount {
-    margin-bottom: 2px;
+  .plan-type {
+    padding: 0.4rem 0px;
   }
   .plan .price .price-discount {
-    font-size: 12px;
-    margin-bottom: 3px;
-    color: var(--Marine-blue);
-    font-family: "Medium";
+    font-size: 0.73rem;
+    margin-bottom: 0;
   }
-  
+}

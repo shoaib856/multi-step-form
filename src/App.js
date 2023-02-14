@@ -9,7 +9,7 @@ import StepFour from "./components/step-four";
 import ThankYou from "./components/thank-you";
 
 function App() {
-  let [index, setIndex] = useState(0);
+  let [index, setIndex] = useState(3);
   const handleNextStep = () => {
     setIndex(++index);
   };
@@ -23,45 +23,56 @@ function App() {
     <div className="form">
       <div className="container">
         <div className="row">
-          <div className="aside">
+          <aside>
             <StepList index={index > 3 ? 3 : index} />
-          </div>
-          <div className="main">
+          </aside>
+          <main>
             {index < 4 ? (
               <>
-                <Header index={index} />
-                {index === 0 ? (
-                  <StepOne />
-                ) : index === 1 ? (
-                  <StepTwo />
-                ) : index === 2 ? (
-                  <StepThree />
-                ) : (
-                  index === 3 && <StepFour changePlan={changePlan} />
-                )}
-                {index > 0 && (
-                  <button
-                    type="button"
-                    className="back"
-                    onClick={handleBackStep}
-                  >
-                    Go Back
-                  </button>
-                )}
-                <button
-                  type="button"
-                  className="next"
-                  onClick={() => {
-                    handleNextStep();
+                <div className="content">
+                  <Header index={index} />
+                  {index === 0 ? (
+                    <StepOne />
+                  ) : index === 1 ? (
+                    <StepTwo />
+                  ) : index === 2 ? (
+                    <StepThree />
+                  ) : (
+                    index === 3 && <StepFour changePlan={changePlan} />
+                  )}
+                </div>
+                <div
+                  className="btns"
+                  style={{
+                    flexDirection: index === 0 ? "row-reverse" : "row",
                   }}
                 >
-                  {index === 3 ? "Confirm" : "Next Step"}
-                </button>
+                  {index > 0 && (
+                    <button
+                      type="button"
+                      className="back"
+                      onClick={handleBackStep}
+                    >
+                      Go Back
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    className="next"
+                    onClick={() => {
+                      handleNextStep();
+                    }}
+                  >
+                    {index === 3 ? "Confirm" : "Next Step"}
+                  </button>
+                </div>
               </>
             ) : (
-              <ThankYou />
+              <div className="content">
+                <ThankYou />
+              </div>
             )}
-          </div>
+          </main>
         </div>
       </div>
     </div>

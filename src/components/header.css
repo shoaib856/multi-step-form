@@ -1,15 +1,24 @@
 .heading {
-  margin-bottom: 36px;
+  margin-bottom: 2.2rem;
+  padding-left: 1px;
 }
 .heading-title {
-    color: var(--Marine-blue);
-    font-size: 32px;
-    margin-bottom: 10px;
-    font-family: "Bold";
+  color: var(--Marine-blue);
+  font-size: 2rem;
+  margin-bottom: 8px;
+  font-family: "Bold";
 }
 .heading-desc {
-    font-size: 16px;
-    color: var(--Cool-gray);
-    font-family: "Regular";
-    padding-left: .5px;
+  font-size: 1rem;
+  color: var(--Cool-gray);
+  font-family: "Regular";
+}
+@media (max-width: 375px) {
+  .heading {
+    margin-bottom: 1.3rem;
+    padding-left: 0;
+  }
+  .heading-title {
+    font-size: 1.5rem;
+  }
 }

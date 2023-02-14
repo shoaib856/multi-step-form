@@ -29,13 +29,15 @@ function Plan({ plan, type, priceMonthly, priceYearly, planSelecting }) {
           alt="..."
         />
       </div>
-      <p className="desc">{plan}</p>
-      <p className="price" style={{ display: type ? "block" : "none" }}>
-        ${priceMonthly}/mo
-      </p>
-      <div className="price" style={{ display: type ? "none" : "block" }}>
-        <p className="price-amount">${priceYearly}/yr</p>
-        <p className="price-discount">2 months free</p>
+      <div className="details">
+        <p className="desc">{plan}</p>
+        <p className="price" style={{ display: type ? "block" : "none" }}>
+          ${priceMonthly}/mo
+        </p>
+        <div className="price" style={{ display: type ? "none" : "block" }}>
+          <p className="price-amount">${priceYearly}/yr</p>
+          <p className="price-discount">2 months free</p>
+        </div>
       </div>
     </label>
   );

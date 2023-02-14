@@ -8,11 +8,17 @@
   align-items: center;
   font-family: "Bold";
   color: var(--Marine-blue);
-  padding-bottom: 6px;
+  padding-top: 2px;
+}
+.summary .selected-plan .selected-plan-name {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+  align-items: baseline;
 }
 .summary .selected-plan .selected-plan-name p {
   font-size: 15.5px;
-  margin-bottom: -3px;
+  margin: 0;
 }
 
 .summary .selected-plan .selected-plan-name .change-plan-btn {
@@ -30,12 +36,27 @@
 .summary .selected-plan .selected-plan-price {
   margin: 0;
 }
+.summary hr {
+  color: var(--Cool-gray);
+  margin: 22px 0 14px;
+}
+
+.summary .selected-add-ons {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3px;
+  gap: 15px;
+  padding-bottom: 16px;
+}
 .summary .selected-add-ons .selected-add-on {
   display: flex;
   justify-content: space-between;
   font-family: "Regular";
-  font-size: 14px;
+  font-size: 0.88rem;
   color: var(--Cool-gray);
+}
+.summary .selected-add-ons .selected-add-on p {
+  margin-bottom: 0;
 }
 .total-price {
   font-family: "Regular";
@@ -43,14 +64,41 @@
   justify-content: space-between;
   align-items: center;
   color: var(--Cool-gray);
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 22px;
-  font-size: 14px;
+  font-size: 0.89rem;
+  margin-bottom: -4px;
+  padding: 22px 25px 0;
 }
 .total-price .price {
   font-family: "Bold";
   color: var(--Purplish-blue);
   font-size: 20px;
   margin: 0;
+}
+@media (max-width: 425px) {
+  .summary {
+    padding: 18px 15px 4px;
+  }
+  .summary .selected-plan {
+    padding-top: 0;
+  }
+  .summary .selected-plan .selected-plan-name p {
+    font-size: 0.85rem;
+  }
+  .summary .selected-plan .selected-plan-price {
+    margin-top: 6.5px;
+    font-size: 0.9rem;
+  }
+  .summary hr {
+    margin: 10px 0;
+  }
+  .summary .selected-add-ons {
+    gap: 11px;
+    padding-bottom: 0;
+  }
+  .total-price {
+    padding: 30px 15px 0;
+  }
+  .total-price .price {
+    font-size: 1.05rem;
+  }
 }
