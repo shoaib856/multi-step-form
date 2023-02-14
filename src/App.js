@@ -9,7 +9,7 @@ import StepFour from "./components/step-four";
 import ThankYou from "./components/thank-you";
 
 function App() {
-  let [index, setIndex] = useState(3);
+  let [index, setIndex] = useState(0);
   const handleNextStep = () => {
     setIndex(++index);
   };
